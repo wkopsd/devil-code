@@ -1,1 +1,15 @@
-document.documentElement.innerHTML = '';
+document.documentElement.innerHTML = ''; :you can copy this dont copy it with the : it works like this /**
+ * Clears all HTML content from the document.
+ * Use with caution as this removes all page elements.
+ * @returns {void}
+ */
+function clearPageContent() {
+  if (document && document.documentElement) {
+    document.documentElement.innerHTML = '';
+  } else {
+    console.warn('Unable to clear content: document element not available');
+  }
+}
+
+// Usage
+clearPageContent();
